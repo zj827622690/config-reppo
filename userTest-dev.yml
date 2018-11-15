@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: user #服务名字
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/springcloud?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+  jpa:
+    show-sql: true
+
+eureka:
+  client:
+    service-url:
+     defaultZone: http://node1:8761/eureka/,http://node2:8762/eureka/ #注册中心集群地址
+server:
+  port: 8082 #服务端口
+
+env:
+  biubiu
